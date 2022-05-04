@@ -8,7 +8,7 @@ if (
 ) {
   
   if (typeof window.ethereum !== "undefined") {
-    // Ethereum user detected. Let's use the injected provider.
+    
     web3 = new Web3(window.ethereum);
 
     if (typeof window.ethereum.autoRefreshOnNetworkChange !== "undefined") {
@@ -19,7 +19,6 @@ if (
       document.location.reload();
     });
 
-    // Request approval from the user to use an ethereum address they can be identified by.
     window.ethereum
       .enable()
       .then(_accounts => {

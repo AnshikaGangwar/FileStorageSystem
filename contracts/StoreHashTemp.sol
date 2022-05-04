@@ -3,13 +3,13 @@
 pragma solidity >=0.7.0;
 
 contract Contract {
- string[] ipfsHash;
+ string ipfsHash;
  
  function sendHash( string memory x) public {
-   ipfsHash.push(x);
+   ipfsHash = x;
  }
 
- function getHash() public view returns ( string[] memory ) {
+ function getHash() public view returns ( string memory x) {
    return ipfsHash;
  }
 }
